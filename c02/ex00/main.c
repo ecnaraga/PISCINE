@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs2.h                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: galambey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/28 15:18:53 by galambey          #+#    #+#             */
-/*   Updated: 2023/02/28 15:32:59 by galambey         ###   ########.fr       */
+/*   Created: 2023/02/13 11:14:19 by galambey          #+#    #+#             */
+/*   Updated: 2023/02/13 11:19:45 by galambey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS2_H
-# define FT_ABS2_H
+#include <stdio.h>
+#include "ft_strcpy.c"
 
-# define ABS(Value) ((Value < 0) ? -Value : Value)
+int	main()
+{
+	char src[] = "Salut tu vas bien?";
+	char	dest[100];
 
-#endif
+	ft_strcpy(dest, src);
+	printf("%s\n%s", src, dest);
+}

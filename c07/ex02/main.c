@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_boolean.h                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: galambey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/28 10:30:15 by galambey          #+#    #+#             */
-/*   Updated: 2023/02/28 12:41:09 by galambey         ###   ########.fr       */
+/*   Created: 2023/02/23 17:13:36 by galambey          #+#    #+#             */
+/*   Updated: 2023/02/27 15:12:28 by galambey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_BOOLEAN_H
-# define FT_BOOLEAN_H
+#include <stdio.h>
+#include <stdlib.h>
+#include "ft_ultimate_range.c"
 
-# include <unistd.h>
+int	main(void)
+{
+	int	*array;
+	int	min;
+	int	max;
+	int	i;
 
-typedef int	t_bool;
-# define EVEN(x) (x % 2) == 0
-# define TRUE 1
-# define FALSE 0
-# define EVEN_MSG "I have an even number of arguments.\n"
-# define ODD_MSG "I have an odd number of arguments.\n"
-# define SUCCESS 0
-
-#endif
+	min = -1;
+	max = -1;
+	i = 0;
+	printf("size of range: %d", ft_ultimate_range(&array, min, max));
+	while (i < max - min)
+	{
+		printf("%d ", array[i]);
+		i++;
+	}
+	i = 0;
+	free(array);
+	return (0);
+}
