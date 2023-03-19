@@ -1,0 +1,22 @@
+NAME = libft.a
+
+SRC = ./srcs/ft_putchar.c ./srcs/ft_putstr.c ./srcs/ft_strlen.c ./srcs/ft_strcmp.c ./srcs/ft_swap.c
+
+#OBJ = $(SRC.c=.o}
+
+CFLAGS = -Wall -Wextra -Werror
+
+all: $(NAME)
+
+$(NAME):
+	gcc -c $(CFLAGS) $(SRC) -I includes
+	mv ft_putchar.o ft_putstr.o ft_strlen.o ft_strcmp.o ft_swap.o srcs
+	ar -rcs $(NAME) ./srcs/ft_putchar.o ./srcs/ft_putstr.o ./srcs/ft_strlen.o ./srcs/ft_strcmp.o ./srcs/ft_swap.o
+
+clean:
+	rm -f ./srcs/ft_putchar.o ./srcs/ft_putstr.o ./srcs/ft_strlen.o ./srcs/ft_strcmp.o ./srcs/ft_swap.o
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all

@@ -1,0 +1,9 @@
+cc -Wall -Wextra -Werror test.c -L./ft -lft
+
+# test.c : fichier contenant le main
+# -L./ft : -L le flag indiquant le chemin ou se trouvfe la library (libft.a) soit ./ft (dossier courant/dossier ft)
+# -lft : l pour le prefixe lib, ft car apres le prefixe lib on l a appele ft, et le .a est sous entendu
+
+# attention -L./ft et -lft doivent se trouver apres test.c pour que la compilation reussisse
+
+# On peut utiliser la commande " ar -t nom_de_la_library.a " pour avoir la liste des fichiers objets inclus dans la library
